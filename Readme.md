@@ -34,8 +34,9 @@ Meme Generator Battle is a web application allowing users to generate, share, an
 - **Learning Opportunities**:
 - **Frontend**: Developing an intuitive meme editor and integrating real-time voting features enhances my UI/UX design skills.  
   - **Backend**: Designing a scalable system for managing uploads. 
-  - **Full Stack Integration**: Connecting user-generated content with a dynamic backend system is an excellent learning experience.  
+  - **Full Stack Integration**: Connecting user-generated content with a dynamic backend system is an outstanding
+   learning experience.  
 - **Valuable Skills**:  
-  - Working with multimedia data (images).
+  - Working with multimedia data (images)..
 
 
