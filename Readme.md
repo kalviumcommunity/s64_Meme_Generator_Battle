@@ -41,3 +41,4 @@ Meme Generator Battle is a web application allowing users to generate, share, an
 
 .
 ------
+------
