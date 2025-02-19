@@ -39,4 +39,6 @@ Meme Generator Battle is a web application allowing users to generate, share, an
 - **Valuable Skills**:  
   - Working with multimedia data (images)..
 
-
+.
+------
+------
