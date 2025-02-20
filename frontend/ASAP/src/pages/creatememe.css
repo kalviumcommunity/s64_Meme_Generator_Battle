@@ -1,0 +1,100 @@
+/* Create Meme Page Styling */
+.create-meme-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: linear-gradient(to right, #8e44ad, #ff6b81); */
+    padding: 20px;
+}
+
+.create-meme-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.create-meme-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.create-meme-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* File Upload Styling */
+.file-upload {
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, background 0.3s ease-in-out;
+    background: #f4f4f4;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.file-upload:hover {
+    border-color: #a855f7;
+    background: #e9e9e9;
+}
+
+.file-upload input {
+    display: none;
+}
+
+/* Meme Preview */
+.meme-preview {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption Input */
+.input-caption {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.input-caption:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+/* Submit Button */
+.submit-meme-button {
+    width: 100%;
+    background: #ffcc00;
+    color: black;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-meme-button:hover {
+    background: #ffdb4d;
+    transform: scale(1.05);
+}

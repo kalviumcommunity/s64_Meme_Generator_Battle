@@ -1,6 +1,11 @@
 import React from "react";
+import "./LandingPage.css";
+import { useNavigate } from "react-router-dom";
+
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+  
     return (
     <div className="gh" >
     
@@ -11,7 +16,7 @@ const LandingPage = () => {
       <p className="text-lg text-center max-w-2xl mb-6">
         Unleash your creativity! Generate memes, battle for the top spot, and let the internet decide the ultimate meme champion!
       </p>
-      <button className="bg-yellow-400 text-black px-6 py-3 text-lg font-bold rounded-full shadow-lg hover:bg-yellow-300 transition duration-300">
+      <button className="bg-yellow-400 text-black px-6 py-3 text-lg font-bold rounded-full shadow-lg hover:bg-yellow-300 transition duration-300" onClick={() => navigate('/login')} > 
         Get Started
       </button>
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
