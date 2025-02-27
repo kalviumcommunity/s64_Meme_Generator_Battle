@@ -1,31 +1,26 @@
-require('dotenv').config();
-const express = require('express');
-const { MongoClient } = require('mongodb');
-const Database = {}
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-const client = new MongoClient(process.env.MONGO_URI);
+app.use(express.json()); // Middleware to parse JSON
+app.use(cors()); // Enable CORS
+app.api
+app.use("/api", require("./routes"));
 
-let dbStatus = "Disconnected";
 
-async function connectDB() {
-    try {
-        await client.connect();
-        dbStatus = "Connected to MongoDB";
-        console.log(dbStatus);
-    } catch (error) {
-        dbStatus = "Failed to connect to MongoDB";
-        console.error(error);
-    }
-}
-connectDB();
+// MongoDB Connection
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
-app.get('/', (req, res) => {
-    res.send({ status: dbStatus });
-});
+// Import and use the routes
+const memeRoutes = require("./routes");
+app.use("/api", memeRoutes); // All meme-related API endpoints will be prefixed with /api
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on port http://localhost:${PORT}`));
+
