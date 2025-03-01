@@ -7,6 +7,7 @@ import CreateMeme from "./pages/creatememe";
 import "./app.css"
 import LandingPage from "./pages/LandingPage";
 import BattleArena from "./pages/battelarena";
+import EntitiesPage from "./pages/enititiesPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/creatememe" element={<CreateMeme />} />
           <Route path="/battelarena" element={<BattleArena />} />
+          <Route path="/entity" element={<EntitiesPage />} />
         </Routes>
       </div>
     </Router>
