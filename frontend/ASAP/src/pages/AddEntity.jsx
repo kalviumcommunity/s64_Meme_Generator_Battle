@@ -4,7 +4,7 @@ const AddEntity = ({ onEntityAdded }) => {
   const [formData, setFormData] = useState({
     name: "",
     description: "",
-  });
+  });;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
