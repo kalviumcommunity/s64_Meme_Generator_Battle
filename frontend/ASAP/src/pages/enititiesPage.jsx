@@ -10,7 +10,7 @@ const EntitiesPage = () => {
       const data = await response.json();
       setEntities(data);
     }
-  };
+  };;
 
   useEffect(() => {
     fetchEntities();
