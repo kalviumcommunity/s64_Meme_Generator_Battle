@@ -3,24 +3,27 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+const entityRoutes = require("./entityRoutes");
+const authRoutes = require("./routes/auth");
+const memeRoutes = require("./routes");
+
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-app.use(express.json()); // Middleware to parse JSON
+// Middleware
+app.use(express.json()); // Parse JSON request bodies
 app.use(cors()); // Enable CORS
-app.api
-app.use("/api", require("./routes"));
 
+// Routes
+app.use("/auth", authRoutes);
+app.use("/api", memeRoutes); // Meme-related API endpoints
+app.use("/api", entityRoutes); // Entity-related API endpoints
 
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+  .then(() => console.log("✅ Connected to MongoDB"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-// Import and use the routes
-const memeRoutes = require("./routes");
-app.use("/api", memeRoutes); // All meme-related API endpoints will be prefixed with /api
-
-app.listen(PORT, () => console.log(`Server running on port http://localhost:${PORT}`));
-
+// Start Server
+app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
